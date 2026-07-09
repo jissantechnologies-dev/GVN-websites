@@ -8,6 +8,8 @@ const projects = [
     name: 'S360',
     tag: 'School Management Application',
     icon: '\u{1F393}',
+    orbit: ['\u{1F4DA}', '\u{1F4DD}', '\u{1F4B3}', '\u{1F514}'],
+    accent: '#4f7cff',
     desc: 'S360 is a complete school management application built to simplify daily operations for schools, teachers, students, and parents — from admissions to results, all in one place.',
     features: [
       'Admissions & student enrollment',
@@ -23,6 +25,8 @@ const projects = [
     name: 'Gym-Genie',
     tag: 'Gym Management Application',
     icon: '\u{1F3CB}️',
+    orbit: ['\u{1F4AA}', '\u{23F1}️', '\u{1F4C5}', '\u{1F4C8}'],
+    accent: '#ff7a45',
     desc: 'Gym-Genie helps gym owners manage memberships, billing, and trainers from a single dashboard, while giving members a smooth experience from sign-up to check-in.',
     features: [
       'Membership plans and renewals',
@@ -38,6 +42,8 @@ const projects = [
     name: 'Full ERP',
     tag: 'Customizable Enterprise Suite',
     icon: '\u{1F3ED}',
+    orbit: ['\u{1F4B0}', '\u{1F4E6}', '\u{1F465}', '\u{1F4CA}'],
+    accent: '#22c98a',
     desc: 'Our full ERP model is a customizable, modular system that can be adopted for any industry — giving you one platform to manage finance, inventory, HR, sales, and operations.',
     features: [
       'Finance & accounting',
@@ -75,7 +81,22 @@ function SoftwareDevelopment() {
           {projects.map((p, i) => (
             <Reveal as="div" className={`project-row ${i % 2 === 1 ? 'reverse' : ''}`} key={p.id}>
               <div id={p.id} className="project-visual">
-                <div className="project-visual-icon">{p.icon}</div>
+                <div className="project-visual-stage" style={{ '--accent': p.accent }}>
+                  <span className="visual-glow"></span>
+                  <span className="visual-ring ring-1"></span>
+                  <span className="visual-ring ring-2"></span>
+                  <div className="project-visual-icon">{p.icon}</div>
+                  <div className="orbit-track">
+                    {p.orbit.map((o, oi) => (
+                      <span className="orbit-item" style={{ '--i': oi, '--n': p.orbit.length }} key={o + oi}>
+                        {o}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="sparkle sparkle-1"></span>
+                  <span className="sparkle sparkle-2"></span>
+                  <span className="sparkle sparkle-3"></span>
+                </div>
               </div>
               <div className="project-content">
                 <span className="tag">{p.tag}</span>

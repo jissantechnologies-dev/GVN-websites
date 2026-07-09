@@ -1,0 +1,23 @@
+.benefits-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.benefits-copy p {
+  margin-bottom: 24px;
+}
+
+.benefits-list {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+}
+
+@media (max-width: 900px) {
+  .benefits-row {
+    grid-template-columns: 1fr;
+  }
+}

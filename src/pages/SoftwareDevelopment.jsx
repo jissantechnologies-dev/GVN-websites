@@ -107,7 +107,10 @@ function SoftwareDevelopment() {
                     <li key={f}>{f}</li>
                   ))}
                 </ul>
-                <Link to="/contact" className="btn btn-primary">Discuss this project</Link>
+                <div className="btn-row">
+                  <Link to="/contact" className="btn btn-primary">Discuss this project</Link>
+                  <Link to={`/software-development/${p.id}`} className="btn btn-outline">Read more...</Link>
+                </div>
               </div>
             </Reveal>
           ))}

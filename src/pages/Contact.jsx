@@ -58,7 +58,7 @@ function Contact() {
 
       <section className="section">
         <div className="container contact-grid">
-          <Reveal className="contact-info">
+          <Reveal className="contact-info card">
             <h2>Get in touch</h2>
             <p>
               Fill out the form and our team will reach out to discuss your
@@ -66,21 +66,21 @@ function Contact() {
             </p>
             <ul className="contact-details">
               <li>
-                <span className="card-icon">&#9993;&#65039;</span>
+                <span className="contact-icon">&#9993;&#65039;</span>
                 <div>
                   <strong>Email</strong>
                   <a href="mailto:gainvaluablesolution@gmail.com">gainvaluablesolution@gmail.com</a>
                 </div>
               </li>
               <li>
-                <span className="card-icon">&#128222;</span>
+                <span className="contact-icon">&#128222;</span>
                 <div>
                   <strong>Phone</strong>
                   <a href="tel:+919025325123">+91 90253 25123</a>
                 </div>
               </li>
               <li>
-                <span className="card-icon">&#128205;</span>
+                <span className="contact-icon">&#128205;</span>
                 <div>
                   <strong>Address</strong>
                   <span>{ADDRESS}</span>
